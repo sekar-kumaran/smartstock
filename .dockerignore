@@ -36,6 +36,5 @@ docker-compose.yml
 *.log
 
 # Large data/outputs that aren't needed in the container image
-/data/*.csv
-!/data/sample_dataset.csv
 /outputs/
+!/data/demo/smartstock_demo.csv

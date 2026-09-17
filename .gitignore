@@ -73,7 +73,6 @@ venv.bak/
 .DS_Store
 
 # SmartStock specific
-/data/
 /outputs/
 *.pkl
 *.joblib
@@ -82,5 +81,4 @@ venv.bak/
 # Wait, for this repo, we probably want the artifacts to be committed so the app works in cloud.
 # So we will exclude the model artifacts from gitignore, but ignore big data.
 # Let's ignore actual large datasets.
-/data/*.csv
-!/data/sample_dataset.csv
+!/data/demo/smartstock_demo.csv
