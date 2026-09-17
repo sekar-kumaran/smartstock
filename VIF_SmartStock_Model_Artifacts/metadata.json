@@ -1,0 +1,68 @@
+{
+    "schema_config": {
+        "date_column": "date",
+        "target_column": "sales",
+        "grain_features": [
+            "outlet",
+            "product_identifier"
+        ],
+        "categorical_features": [
+            "category_of_product",
+            "state",
+            "department_identifier"
+        ],
+        "numeric_features": [
+            "sell_price"
+        ],
+        "time_features": [
+            "week_id"
+        ]
+    },
+    "data_quality_baseline": {
+        "train_shape": [
+            395000,
+            9
+        ],
+        "test_shape": [
+            15500,
+            9
+        ],
+        "train_duplicates": 0,
+        "test_duplicates": 0,
+        "missing_values_train": {
+            "date": 0,
+            "product_identifier": 0,
+            "department_identifier": 0,
+            "category_of_product": 0,
+            "outlet": 0,
+            "state": 0,
+            "sales": 0,
+            "week_id": 0,
+            "sell_price": 0
+        },
+        "missing_values_test": {
+            "id": 0,
+            "date": 0,
+            "product_identifier": 0,
+            "department_identifier": 0,
+            "category_of_product": 0,
+            "outlet": 0,
+            "state": 0,
+            "week_id": 0,
+            "sell_price": 0
+        },
+        "train_sales_range": {
+            "min": 0.0,
+            "max": 293.0
+        },
+        "train_price_range": {
+            "min": 0.05,
+            "max": 44.36
+        }
+    },
+    "final_champion_metrics": {
+        "MAE": 1.0068579734788379,
+        "RMSE": 3.313925927227908,
+        "SMAPE (%)": 155.46016963514143
+    }
+}

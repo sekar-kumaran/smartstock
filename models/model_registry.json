@@ -1,0 +1,16 @@
+{
+    "forecasting": {
+        "algorithm": "LightGBM",
+        "artifact": "forecasting/champion_lightgbm.pkl"
+    },
+    "clustering": {
+        "algorithm": "KMeans",
+        "artifact": "clustering/product_kmeans.joblib",
+        "scaler": "clustering/product_scaler.joblib",
+        "pca": "clustering/product_pca.joblib"
+    },
+    "anomaly_detection": {
+        "algorithm": "Isolation Forest",
+        "artifact": "anomaly/isolation_forest.joblib"
+    }
+}

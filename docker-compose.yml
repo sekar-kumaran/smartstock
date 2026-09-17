@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  smartstock:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: smartstock_app
+    ports:
+      - "8501:8501"
+    volumes:
+      # Optional: mount local directories if you want live-reloading during development
+      # (Uncomment the lines below for dev mode)
+      # - .:/app
+      # - /app/.venv
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    restart: unless-stopped

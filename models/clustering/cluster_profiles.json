@@ -1,0 +1,34 @@
+{
+  "0": {
+    "name": "Low Volume / Risky",
+    "product_count": 11,
+    "mean_sales": 22.54,
+    "sales_std": 15.37,
+    "coefficient_of_variation": 0.33,
+    "strategy": "Consider discounting or discontinuing. High risk of deadstock."
+  },
+  "1": {
+    "name": "High Volume / Stable",
+    "product_count": 12,
+    "mean_sales": 78.62,
+    "sales_std": 7.74,
+    "coefficient_of_variation": 0.22,
+    "strategy": "Cash cows. Maintain strong availability and automate reorders."
+  },
+  "2": {
+    "name": "Steady Performers",
+    "product_count": 11,
+    "mean_sales": 55.39,
+    "sales_std": 11.94,
+    "coefficient_of_variation": 0.11,
+    "strategy": "Reliable mid-tier products. Optimize inventory holding costs."
+  },
+  "3": {
+    "name": "Low Volume / Volatile",
+    "product_count": 16,
+    "mean_sales": 26.67,
+    "sales_std": 5.38,
+    "coefficient_of_variation": 0.33,
+    "strategy": "Monitor closely. Evaluate seasonal patterns before discontinuing."
+  }
+}
