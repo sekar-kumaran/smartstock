@@ -36,10 +36,13 @@ class SmartStockPredictor:
             raise ValueError(f"Missing required features after engineering: {missing_cols}")
             
         for col in self.expected_features:
-            if col not in self.encoders.keys() and df_encoded[col].dtype == 'object':
-                try:
-                    df_encoded[col] = df_encoded[col].astype(float)
-                except ValueError:
+            if col not in self.encoders.keys():
+                if pd.api.types.is_object_dtype(df_encoded[col]) or pd.api.types.is_string_dtype(df_encoded[col]):
+                    try:
+                        df_encoded[col] = df_encoded[col].astype(float)
+                    except ValueError:
+                        df_encoded[col] = df_encoded[col].astype('category').cat.codes
+                elif df_encoded[col].dtype.name in ['string', 'string[python]', 'string[pyarrow]']:
                     df_encoded[col] = df_encoded[col].astype('category').cat.codes
 
         # 5. Select and order features exactly as the model expects
