@@ -74,8 +74,6 @@ venv.bak/
 
 # SmartStock specific
 /outputs/
-*.pkl
-*.joblib
 *.csv
 # However, we DO want to keep the offline models if they are checked into git.
 # Wait, for this repo, we probably want the artifacts to be committed so the app works in cloud.
