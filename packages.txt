@@ -1,0 +1,4 @@
+libgomp1
+zlib1g-dev
+libjpeg-dev
+build-essential
